@@ -2,52 +2,55 @@
 
 <html>
     <head>
-        <meta charset="utf-8"/>
+        <meta charset="utf-8" />
         <title>Path Generator</title>
-        <link rel="icon" type="image" href="images/icon.png">
-        <link rel="stylesheet" href="index.css">
+        <link rel="icon" type="image" href="images/icon.png" />
+        <link rel="stylesheet" href="index.css" />
     </head>
 
     <body oncontextmenu="return false;">
-        <div>
-            <canvas id="fieldCanvas" class="fieldCanvas" width="693" height="693"></canvas>
-        </div>
-            
-            <div class="sliderContainer">
-                <input type="range" value="20" min="0" max="200" step="0.01" oninput="this.nextElementSibling.value = this.value" id="decelerationSlider">
-                <output class="text" id="decelVal">20</output>
-                <label for="decelerationSlider" class="text">Max Deceleration</label>
+        <div class="flex-container">
+            <div>
+                <canvas id="fieldCanvas" class="fieldCanvas"></canvas>
             </div>
-                
-            <div class="sliderContainer">
-                <input type="range" value="62.83" min="0" max="200" step="0.01" oninput="this.nextElementSibling.value = this.value" id="maxSpeedSlider">
-                <output class="text" id="maxSpeedVal">62.83</output>
-                <label for="maxSpeedSlider" class="text">Max Speed</label>
-            </div>
-                
-            <div class="sliderContainer">
-                <input type="range" value="50" min="0.1" max="200" step="0.01" oninput="this.nextElementSibling.value = this.value" id="multiplierSlider">
-                <output class="text" id="multiplierVal">50</output>
-                <label for="multiplierSlider" class="text">Turn Multiplier</label>
-            </div>
-                
-            <div class="sliderContainer">
-            <button type="button" id="downloadPathBtn">Download Path Data</button>
-            <input type="file" id="uploadPathBtn"></input>
-            <label for="uploadPathBtn" id="uploadPathLabel">Upload Path Data</label>
-            </div>
+            <div class="floating-container">
+                <div class="sliderContainer">
+                    <input type="range" value="20" min="0" max="200" step="0.01" oninput="this.nextElementSibling.value = this.value" id="decelerationSlider" />
+                    <output class="text" id="decelVal">20</output>
+                    <label for="decelerationSlider" class="text">Max Deceleration</label>
+                </div>
 
-        <div class="modeContainer">
-            <button type="button" id="modeBtn">mode</button>
-        </div>
+                <div class="sliderContainer">
+                    <input type="range" value="62.83" min="0" max="200" step="0.01" oninput="this.nextElementSibling.value = this.value" id="maxSpeedSlider" />
+                    <output class="text" id="maxSpeedVal">62.83</output>
+                    <label for="maxSpeedSlider" class="text">Max Speed</label>
+                </div>
 
-        <div class="debugContainer">
-            <input type="file" id="uploadDebugBtn"></input>
-            <label for="uploadDebugBtn" id="uploadDebugLabel">Upload Robot Debug Data</label>
-            <button type="button" id="debugBackBtn">&#x23EE;</button>
-            <button type="button" id="debugPauseBtn">&#x23EF;</button>
-            <button type="button" id="debugForwardBtn">&#x23ED;</button>
-            <input type="range" value ="0" min="0" max="100" step="1" oninput="this.nextElementSibling.value = this.value" id="timeSlider">
+                <div class="sliderContainer">
+                    <input type="range" value="50" min="0.1" max="200" step="0.01" oninput="this.nextElementSibling.value = this.value" id="multiplierSlider" />
+                    <output class="text" id="multiplierVal">50</output>
+                    <label for="multiplierSlider" class="text">Turn Multiplier</label>
+                </div>
+
+                <div class="sliderContainer">
+                    <button type="button" id="downloadPathBtn">Download Path Data</button>
+                    <input type="file" id="uploadPathBtn" />
+                    <label for="uploadPathBtn" id="uploadPathLabel">Upload Path Data</label>
+                </div>
+
+                <div class="modeContainer">
+                    <button type="button" id="modeBtn">mode</button>
+                </div>
+
+                <div class="debugContainer">
+                    <input type="file" id="uploadDebugBtn" />
+                    <label for="uploadDebugBtn" id="uploadDebugLabel">Upload Robot Debug Data</label>
+                    <button type="button" id="debugBackBtn">&#x23EE;</button>
+                    <button type="button" id="debugPauseBtn">&#x23EF;</button>
+                    <button type="button" id="debugForwardBtn">&#x23ED;</button>
+                    <input type="range" value="0" min="0" max="100" step="1" oninput="this.nextElementSibling.value = this.value" id="timeSlider" />
+                </div>
+            </div>
         </div>
 
         <div class="graph" id="graphContainer">

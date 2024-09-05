@@ -2,6 +2,8 @@
 
 
 const canvas = document.getElementById('fieldCanvas');
+canvas.width = Math.floor(Math.min(window.innerWidth, window.innerHeight))
+canvas.height = Math.floor(Math.min(window.innerWidth, window.innerHeight))
 const ctx = canvas.getContext('2d');
 
 

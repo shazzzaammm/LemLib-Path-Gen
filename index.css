@@ -2,9 +2,24 @@ body {
     background-color: #053511;
 }
 
-.fieldCanvas {
+#fieldCanvas {
+    display: block;
     border: 1px solid hwb(0 0% 100%);
-    float: left;
+    margin: 0;
+}
+
+/* comment */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+/* Floating Container */
+.floating-container {
+    padding: 0.5%;
 }
 
 /**
@@ -15,25 +30,22 @@ body {
     flex-wrap: wrap;
     padding: 0.5%;
     color: white;
+    list-style: none;
 }
 
 .sliderContainer input {
-    list-style: none;
     flex-basis: 40%;
 }
 
 .sliderContainer output {
-    list-style: none;
     flex-basis: 10%;
 }
 
 .sliderContainer label {
-    list-style: none;
     flex-basis: 40%;
 }
 
 .sliderContainer button {
-    list-style: none;
     flex-basis: 100%;
     color: black;
 }
@@ -47,25 +59,22 @@ body {
     padding-left: 0;
     padding-top: 49px;
     color: white;
+    list-style: none;
 }
 
 .debugContainer input {
-    list-style: none;
     flex-basis: 100%;
 }
 
 .debugContainer output {
-    list-style: none;
     flex-basis: 10%;
 }
 
 .debugContainer label {
-    list-style: none;
     flex-basis: 40%;
 }
 
 .debugContainer button {
-    list-style: none;
     flex-basis: 10%;
     width: 50px;
     height: 50px;
